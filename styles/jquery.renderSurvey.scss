@@ -1,0 +1,47 @@
+.jq-rs-title {
+    text-align:center;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight:200;
+    font-size:40px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+.jq-rs-pill.jq-rs-pill-floated {
+    float:left;
+}
+
+.jq-rs-pill.jq-rs-pill-centered {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.jq-rs-pill {
+    cursor:pointer;
+    background-color:#E1F1FF;
+    width:45%;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    margin-top:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    label {
+        display:inline-block;
+        padding:12px 0px 12px 20px;
+        color:#1F5D96;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    input {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        border:none;
+        padding:0px 3px;
+        width:100%;
+        height:23px;
+        font-size:17px;
+    }
+}

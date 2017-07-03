@@ -4,16 +4,25 @@
       <form>
         <h1 class="jq-rs-title"></h1>
         <div data-contain="answers"></div>
+        <div style="clear:both;"></div>
         <div data-contain="other">
-          <div class="jq-rs-pill">
-            <label>Other:</label>
-            <input type="text" name="other">
+          <div class="jq-rs-pill jq-rs-pill-centered">
+            <table>
+              <tr>
+                <td>
+                  <label>Other:</label>
+                </td>
+                <td style="width:100%;padding-left:10px;padding-right:15px;">
+                  <input type="text" name="other">
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </form>
     `);
     const $answer = $(`
-      <div data-contain="answer" class="jq-rs-pill">
+      <div data-contain="answer" class="jq-rs-pill jq-rs-pill-floated">
         <label></label>
         <input type="hidden" name="answer">
       </div>
