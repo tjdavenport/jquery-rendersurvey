@@ -12,7 +12,7 @@ gulp.task('js', () => {
     }))
     .pipe(uglify())
     .pipe(rename('jquery.renderSurvey.min.js'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('css', () => {
@@ -20,7 +20,7 @@ gulp.task('css', () => {
     .pipe(sass())
     .pipe(cleanCss())
     .pipe(rename('jquery.renderSurvey.min.css'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('dist', ['js', 'css'], (done) => {
