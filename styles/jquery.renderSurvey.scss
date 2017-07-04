@@ -7,13 +7,41 @@
     margin-bottom:30px;
 }
 
-.jq-rs-pill.jq-rs-pill-floated {
-    float:left;
+.jq-rs-selected {
+    background-color:#5EB736;
+    height:20px;
+    width:20px;
+    float:right;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    border-radius: 9999px;
+    margin:10px 10px;
 }
 
-.jq-rs-pill.jq-rs-pill-centered {
-    margin-left:auto;
-    margin-right:auto;
+.jq-rs-btn:disabled {
+    background-color:#aacdee;
+}
+
+.jq-rs-btn {
+    display:block;
+    background-color:#1F5D96;
+    width:45%;
+    border:none;
+    color:#fff;
+    padding:7px;
+    font-size:14px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.jq-rs-centered {
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+.jq-rs-pill.jq-rs-pill-floated {
+    float:left;
 }
 
 .jq-rs-pill {
@@ -22,7 +50,7 @@
     width:45%;
     margin-left:2.5%;
     margin-right:2.5%;
-    margin-top:20px;
+    margin-bottom:20px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
