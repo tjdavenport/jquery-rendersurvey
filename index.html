@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>jquery.renderSurvey</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/jquery.renderSurvey.min.css">
+  </head>
+  <body style="padding:10px;">
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            jquery.renderSurvey
+          </h1>
+          <h2 class="subtitle">
+            Easy, dynamic survey rendering.
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="columns">
+      <div class="column">
+        <textarea data-contain="config" style="height:300px;" class="textarea">
+{
+  "question":"What is your favorite color?",
+  "answers":[
+      "Red",
+      "Green",
+      "Blue",
+      "Orange"
+  ],
+  "submitUrl":"http://example.com"
+}
+        </textarea>
+        <br>
+        <button data-action="render" type="button" class="button is-primary">Render</button>
+      </div>
+      <div class="column">
+        <table class="table" data-contain="log">
+          <thead>
+            <tr>
+              <th>Log</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="column is-half">
+        <div id="survey"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../dist/jquery.renderSurvey.min.js"></script>
+    <script>
+      function render() {
+        var jsonConfig = $('[data-contain="config"]').val();
+        $('#survey').html('');
+        $('#survey').renderSurvey(JSON.parse(jsonConfig));
+        $('#survey form').on('submit', function(e) {
+          var $form = $(e.target);
+          e.preventDefault();
+          $('[data-contain="log"] tbody')
+            .prepend($(
+            '<tr><td><span style="margin-bottom:7px;" class="tag is-primary">' 
+              + $form.attr('action') + 
+              '</span><textarea class="textarea">'
+              + $form.serialize() + 
+            '</textarea></td></td></tr>'
+          ));
+          render();
+        });
+      }
+
+      $('[data-action="render"]').click(function(e) {
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>

@@ -10,9 +10,20 @@
     "jquery": "3.2.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "http-server": "^0.10.0",
     "spawnit": "0.0.7"
   },
   "scripts": {
-    "dev": "cd ./dev && ../node_modules/.bin/spawnit"
+    "dev": "cd ./dev && ../node_modules/.bin/spawnit",
+    "dist": "./node_modules/.bin/gulp dist",
+    "serve": "./node_modules/.bin/http-server"
   }
 }

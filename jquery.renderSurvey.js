@@ -12,7 +12,7 @@
                 <td>
                   <label>Other:</label>
                 </td>
-                <td style="width:100%;padding-left:10px;padding-right:15px;">
+                <td style="vertical-align:middle;width:100%;padding-left:10px;padding-right:15px;">
                   <input type="text" name="other_answer">
                 </td>
               </tr>
