@@ -1,4 +1,4 @@
-require('./jquery.renderSurvey');
+require('../jquery.renderSurvey');
 
 $('#app').renderSurvey({
   question: 'What is your favorite color?',

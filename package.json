@@ -13,6 +13,6 @@
     "spawnit": "0.0.7"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/spawnit"
+    "dev": "cd ./dev && ../node_modules/.bin/spawnit"
   }
 }
